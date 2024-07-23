@@ -2,9 +2,79 @@
 Hi there <img src="https://media.giphy.com/media/WUlplcMpOCEmTGBtBW/giphy.gif" width="40px"> I'm Danilo Aguiar <img src="https://media.giphy.com/media/VgCDAzcKvsR6OM0uWg/giphy.gif" width="50"> aka Dan <img src="https://user-images.githubusercontent.com/5679180/79618120-0daffb80-80be-11ea-819e-d2b0fa904d07.gif" width="27px">
 </h1>
 
+```java
+import java.util.List;
+
+public class AboutMe {
+    private final String pronouns;
+    private final List<String> askMeAbout;
+    private final List<String> code;
+    private final Technologies technologies;
+    private final List<String> currentOccupation;
+    private final String challenge;
+    private final String goals;
+    private final String funFact;
+
+    public AboutMe(String pronouns, List<String> askMeAbout, List<String> code, Technologies technologies, List<String> currentOccupation, String challenge, String goals, String funFact) {
+        this.pronouns = pronouns;
+        this.askMeAbout = askMeAbout;
+        this.code = code;
+        this.technologies = technologies;
+        this.currentOccupation = currentOccupation;
+        this.challenge = challenge;
+        this.goals = goals;
+        this.funFact = funFact;
+    }
+
+    public static record Technologies(
+            List<String> frontEndJs, 
+            List<String> frontEndCss, 
+            List<String> backEndJava, 
+            List<String> backEndJs, 
+            List<String> backEndPython, 
+            List<String> databases, 
+            List<String> misc) {
+    }
+
+    public static void main(String[] args) {
+        Technologies technologies = new Technologies(
+                List.of("React", "NextJS"),
+                List.of("scss", "styled-components", "Bootstrap"),
+                List.of("Spring"),
+                List.of("Node", "Express"),
+                List.of("flask"),
+                List.of("MongoDB", "mySQL", "SQLServer"),
+                List.of("Bash", "Selenium")
+        );
+
+        AboutMe aboutMe = new AboutMe(
+                "he/him",
+                List.of("web dev", "tech", "app dev", "photography"),
+                List.of("Java", "Python", "Javascript", "Typescript", "HTML", "CSS", "React"),
+                technologies,
+                List.of("Open for job opportunities"),
+                "I’m looking to collaborate with other content creators",
+                "Contribute more to Open Source projects",
+                "There are two ways to write error-free programs; only the third one works"
+        );
+
+        System.out.println("Pronouns: " + aboutMe.pronouns);
+        System.out.println("Ask Me About: " + aboutMe.askMeAbout);
+        System.out.println("Code: " + aboutMe.code);
+        System.out.println("Technologies (FrontEnd JS): " + aboutMe.technologies.frontEndJs());
+        System.out.println("Current Occupation: " + aboutMe.currentOccupation);
+        System.out.println("Challenge: " + aboutMe.challenge);
+        System.out.println("Goals: " + aboutMe.goals);
+        System.out.println("Fun Fact: " + aboutMe.funFact);
+    }
+}
+
+
+```
+
 <div align="center">
   <a href="https://github.com/cutekitten000">
-  <img height="180em" src="https://github-readme-stats.vercel.app/api?username=cutekitten000&show_icons=true&theme=dracula&include_all_commits=true&count_private=true"/>
+  <img height="180em" src="https://github-readme-stats.vercel.app/api?username=cutekitten000&show_icons=true&theme=dracula&include_all_commits=false&count_private=true"/>
   <img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=cutekitten000&layout=compact&langs_count=7&theme=dracula"/>
 </div>
 <div style="display: inline_block" align="center"><br>
@@ -23,32 +93,7 @@ Hi there <img src="https://media.giphy.com/media/WUlplcMpOCEmTGBtBW/giphy.gif" w
   
  <div>
    
-   <section align="center">
-   
-```javascript
-const aboutMe = {
-   pronouns: "he" | "him",
-   askMeAbout: ["web dev", "tech", "app dev", "photography"],
-   code: [Java, Python, Javascript, Typescript, HTML, CSS, React],
-   technologies: {
-      frontEnd: {
-         js: ["React", "NextJS"],
-         css: ["scss", "styled-components", "Bootstrap"]
-      },
-      backEnd: {
-         java: ["Spring"],
-         js: ["Node", "Express"],
-         python: ["flask"]
-      },
-      databases: ["MongoDB", "mySQL", "SQLServer"],
-      misc: ["Bash", "Selenium"]
-   },
-   currentOccupation: ["Open for job opportunities"],
-   challenge: "I’m looking to collaborate with other content creators",
-   goals: "Contribute more to Open Source projects",
-   funFact: "There are two ways to write error-free programs; only the third one works"
-};
-```
+<section align="center">
 ----
 </section>
    
