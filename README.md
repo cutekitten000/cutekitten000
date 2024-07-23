@@ -30,7 +30,9 @@ public class AboutMe {
      * @param goals              my goals
      * @param funFact            a fun fact about me
      */
-    public AboutMe(String pronouns, List<String> askMeAbout, List<String> code, Technologies technologies, List<String> currentOccupation, String challenge, String goals, String funFact) {
+    public AboutMe(String pronouns, List<String> askMeAbout, List<String> code,
+                   Technologies technologies, List<String> currentOccupation,
+                   String challenge, String goals, String funFact) {
         this.pronouns = pronouns;
         this.askMeAbout = askMeAbout;
         this.code = code;
@@ -60,38 +62,46 @@ public class AboutMe {
      * @param args command line arguments
      */
     public static void main(String[] args) {
+        // Initializing the Technologies object with technologies I am familiar with.
         Technologies technologies = new Technologies(
-                List.of("React", "NextJS"),
-                List.of("scss", "styled-components", "Bootstrap"),
-                List.of("Spring"),
-                List.of("Node", "Express"),
-                List.of("flask"),
-                List.of("MongoDB", "mySQL", "SQLServer"),
-                List.of("Bash", "Selenium")
+                List.of("React", "NextJS"),                       // Frontend JavaScript frameworks
+                List.of("scss", "styled-components", "Bootstrap"), // Frontend CSS frameworks
+                List.of("Spring"),                                 // Backend Java frameworks
+                List.of("Node", "Express"),                        // Backend JavaScript frameworks
+                List.of("flask"),                                  // Backend Python frameworks
+                List.of("MongoDB", "mySQL", "SQLServer"),          // Databases I have worked with
+                List.of("Bash", "Selenium")                        // Miscellaneous technologies
         );
 
+        // Creating an instance of AboutMe with my personal details.
         AboutMe aboutMe = new AboutMe(
-                "he/him",
-                List.of("web dev", "tech", "app dev", "photography"),
-                List.of("Java", "Python", "JavaScript", "TypeScript", "HTML", "CSS", "React"),
-                technologies,
-                List.of("Open for job opportunities"),
-                "I’m looking to collaborate with other content creators",
-                "Contribute more to Open Source projects",
-                "There are two ways to write error-free programs; only the third one works"
+                "he/him", // My pronouns
+                List.of("web dev", "tech", "app dev", "photography"), // Topics to ask me about
+                List.of("Java", "Python", "JavaScript", "TypeScript", "HTML", "CSS", "React"), // Programming languages I know
+                technologies, // Technologies I am familiar with
+                List.of("Open for job opportunities"), // My current occupation status
+                "I’m looking to collaborate with other content creators", // My current challenge
+                "Contribute more to Open Source projects", // My goals
+                "There are two ways to write error-free programs; only the third one works" // A fun fact about me
         );
 
+        // Printing my details to the console
         System.out.println("Pronouns: " + aboutMe.pronouns);
         System.out.println("Ask Me About: " + aboutMe.askMeAbout);
         System.out.println("Code: " + aboutMe.code);
-        System.out.println("Technologies (FrontEnd JS): " + aboutMe.technologies.frontEndJs());
+        System.out.println("Technologies (Frontend JS): " + aboutMe.technologies.frontEndJs());
+        System.out.println("Technologies (Frontend CSS): " + aboutMe.technologies.frontEndCss());
+        System.out.println("Technologies (Backend Java): " + aboutMe.technologies.backEndJava());
+        System.out.println("Technologies (Backend JS): " + aboutMe.technologies.backEndJs());
+        System.out.println("Technologies (Backend Python): " + aboutMe.technologies.backEndPython());
+        System.out.println("Technologies (Databases): " + aboutMe.technologies.databases());
+        System.out.println("Technologies (Misc): " + aboutMe.technologies.misc());
         System.out.println("Current Occupation: " + aboutMe.currentOccupation);
         System.out.println("Challenge: " + aboutMe.challenge);
         System.out.println("Goals: " + aboutMe.goals);
         System.out.println("Fun Fact: " + aboutMe.funFact);
     }
 }
-
 
 
 ```
