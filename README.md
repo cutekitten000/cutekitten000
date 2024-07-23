@@ -30,9 +30,7 @@ public class AboutMe {
      * @param goals              my goals
      * @param funFact            a fun fact about me
      */
-    public AboutMe(String pronouns, List<String> askMeAbout, List<String> code,
-                   Technologies technologies, List<String> currentOccupation,
-                   String challenge, String goals, String funFact) {
+    public AboutMe(String pronouns, List<String> askMeAbout, List<String> code, Technologies technologies, List<String> currentOccupation, String challenge, String goals, String funFact) {
         this.pronouns = pronouns;
         this.askMeAbout = askMeAbout;
         this.code = code;
