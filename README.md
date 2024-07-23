@@ -5,6 +5,9 @@ Hi there <img src="https://media.giphy.com/media/WUlplcMpOCEmTGBtBW/giphy.gif" w
 ```java
 import java.util.List;
 
+/**
+ * This class represents information about me, Dan.
+ */
 public class AboutMe {
     private final String pronouns;
     private final List<String> askMeAbout;
@@ -15,6 +18,18 @@ public class AboutMe {
     private final String goals;
     private final String funFact;
 
+    /**
+     * Constructor to initialize the AboutMe object with my details.
+     *
+     * @param pronouns           my pronouns
+     * @param askMeAbout         topics to ask me about
+     * @param code               programming languages I know
+     * @param technologies       technologies I am familiar with
+     * @param currentOccupation  my current occupation
+     * @param challenge          current challenge I am working on
+     * @param goals              my goals
+     * @param funFact            a fun fact about me
+     */
     public AboutMe(String pronouns, List<String> askMeAbout, List<String> code, Technologies technologies, List<String> currentOccupation, String challenge, String goals, String funFact) {
         this.pronouns = pronouns;
         this.askMeAbout = askMeAbout;
@@ -26,6 +41,9 @@ public class AboutMe {
         this.funFact = funFact;
     }
 
+    /**
+     * This record represents various technologies I am familiar with.
+     */
     public static record Technologies(
             List<String> frontEndJs, 
             List<String> frontEndCss, 
@@ -36,6 +54,11 @@ public class AboutMe {
             List<String> misc) {
     }
 
+    /**
+     * Main method to demonstrate the creation of the AboutMe object with my details.
+     *
+     * @param args command line arguments
+     */
     public static void main(String[] args) {
         Technologies technologies = new Technologies(
                 List.of("React", "NextJS"),
@@ -50,7 +73,7 @@ public class AboutMe {
         AboutMe aboutMe = new AboutMe(
                 "he/him",
                 List.of("web dev", "tech", "app dev", "photography"),
-                List.of("Java", "Python", "Javascript", "Typescript", "HTML", "CSS", "React"),
+                List.of("Java", "Python", "JavaScript", "TypeScript", "HTML", "CSS", "React"),
                 technologies,
                 List.of("Open for job opportunities"),
                 "I’m looking to collaborate with other content creators",
@@ -68,6 +91,7 @@ public class AboutMe {
         System.out.println("Fun Fact: " + aboutMe.funFact);
     }
 }
+
 
 
 ```
