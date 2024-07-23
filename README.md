@@ -130,10 +130,6 @@ public class AboutMe {
   
  <div>
    
-<section align="center">
-----
-</section>
-   
   ![Snake animation](https://github.com/cutekitten001/cutekitten001/blob/cabfb9958b146d4b6ddf8d2256d2769909e41bd7/github-contribution-grid-snake.svg) 
  
  </div>
